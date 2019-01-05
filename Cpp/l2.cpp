@@ -67,18 +67,35 @@ void wypiszTrzycyfrowe ()
     unsigned int suma = 0;
     
     for(setki = 1; setki < 10; setki++){
-        for(dziesiatki = 1; dziesiatki <= 9; dziesiatki++){
+        for(dziesiatki = 0; dziesiatki <= 9; dziesiatki++){
             for(jednosci = 0; jednosci <=9; jednosci++){
                 if(jednosci != dziesiatki && jednosci != setki && dziesiatki != setki){
-                    cout << setki << "" << dziesiatki << "" << jednosci << endl;
+                    cout << setki << dziesiatki << jednosci << endl;
                     suma++;
                 }
             }
         }
     }
-    cout << "Ilosc liczb wyniosla: " << suma;
+    cout << "Ilosc liczb wyniosla: " << suma << endl;
     
 }
+void zadanie6(){
+    unsigned int i = 0, suma = 0, n;
+    cout << "Ile liczb= ";
+    cin >> n;
+    licz:
+    suma +=i;
+    if(i == n)
+    goto koniec;
+    else
+    {
+        i++;
+        goto licz;
+    }
+    koniec;
+    cout << "Suma"<< n << " kolejnych liczb naturalnych wynosi: " << suma << endl;
+}
+
 
 int
 main ()
@@ -93,6 +110,7 @@ main ()
      wyswietlNaturalne(limitN); */
  // dodawajLiczbyDopokiDodatnie ();
     wypiszTrzycyfrowe();
+    wczytajDoTablicy();
 
   return 0;
 }
