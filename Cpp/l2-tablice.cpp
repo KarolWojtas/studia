@@ -31,6 +31,27 @@ void wypiszTabliceZKonsoli(){
     }
     
 }
+void okreslCzyParzyste(){
+    int tab[5] = {1, 2, 5, 8, 9};
+    for(int i =0; i < 5; i++){
+        cout << "Element [" << i << "] o wartosci "<< tab[i];
+        if(tab[i] % 2 == 0){
+            cout << " parzysty" << endl;
+        } else {
+            cout <<" nieparzysty" << endl;
+        }
+    }
+}
+void max(){
+    int tab[5] = {5, 34, 88, 2, 10};
+    int max = tab[0];
+    for(int i = 0; i < 5; i++){
+        if(tab[i] > max){
+            max = tab[i];
+        }
+    }
+    cout << "Max: "<< max << endl;
+}
 int main(){
     return 0;
 }
